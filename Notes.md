@@ -28,11 +28,16 @@ git checkout iss53
 or 
 `git checkout -b branchName` creates and moves to new branch
 
+TO merge changes , first go to master
+```sh
 git checkout master
-git merge hotfix
-git branch -d hotfix
-Deleted branch hotfix
-
+git merge branchToMerge
+```
+To delete after merging
+```sh
+git branch -d mergedBranch
+# deleted branch 
+```
 **To see all branches**
 `git branch`
 To see the last commit on each branch, you can run 
