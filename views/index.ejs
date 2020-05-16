@@ -20,31 +20,29 @@
                 <span class="id-column">ID</span>
                 <span>Item</span>
             </div>
+            <!-- Define the items array -->
+            <% const items = [
+                      {id: 1, name: 'potatoes'},
+                      {id: 2, name: 'carrots'},
+                      {id: 3, name: 'onions'}
+                    ]; %>
             <ul class="table-body">
+
+                <!-- Using forEach to print the elements of the items array -->
+                <% items.forEach( item => { %>
                 <li>
-                    <span class="id-column">1</span>
-                    <span class="name-column">potatoes</span>
-                </li>
-                <li>
-                    <span class="id-column">2</span>
-                    <span class="name-column">carrots</span>
-                </li>
-                
-                <li>
-                    <span class="id-column">3</span>
-                    <span class="name-column">onions</span>
-                </li>
-                <!-- Use EJS to define the item constant -->
-                <% const item = {id: 4, name: 'tomatoes'} %>
-                <li>
-                    <!-- Display the name and id property of item -->
                     <span class="id-column">
+                        <!-- Display the id property of item -->
                         <%= item.id %>
+                
                     </span>
                     <span class="name-column">
+                        <!-- Display the name property of item -->
                         <%= item.name %>
+                
                     </span>
                 </li>
+                <% }); %>
 
             </ul>
         </div>
